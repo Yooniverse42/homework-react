@@ -10,4 +10,4 @@
 아직 피그마와 리액트, 환경구성하는 것에 대해 익숙치 않아서 기본 설정에서 시간을 오래 잡아먹었습니다. 그래서 결과물이 원하는대로 나오지 않았습니다. `background-color`와 `color`도 props로 주려고 했으나, 시간상 이유로 하지 못했습니다.
 
 ## 결과물
-![결과물](button.png)
+![결과물](https://github.com/Yooniverse42/homework-react/blob/main/vite-project/button.png?raw=true)
