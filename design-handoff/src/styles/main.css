@@ -1,0 +1,27 @@
+ul {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  gap: 20px;
+  padding: 12px;
+  margin: 0;
+  border: 1px solid black;
+  max-width: 320px;
+  background-color: #141415;
+
+  span {
+    color: #fff;
+    font-size: 20px;
+    line-height: 120%;
+  }
+}
