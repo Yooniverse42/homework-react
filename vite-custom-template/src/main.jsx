@@ -1,18 +1,17 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
+import './styles/main.css';
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>React 웹 앱</h1>
-    </div>
+const domNode = document.getElementById('root');
+
+if (domNode) {
+  createRoot(domNode).render(
+    <StrictMode>
+      <App />
+    </StrictMode>
   );
+} else {
+  console.warn('문서에 "#root" 요소가 존재하지 않습니다.');
 }
-
-const domNode = document.getElementById('react-app');
-createRoot(domNode).render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
 

@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.Gosim {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  a {
+    width: 500px;
+
+    img {
+      width: 500px;
+    }
+  }
+
+  figcaption {
+    padding: 0 20px;
+    border-radius: 20px;
+    background-color: pink;
+
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+small {
+  margin-top: 20px;
+}
