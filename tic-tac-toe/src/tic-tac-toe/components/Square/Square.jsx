@@ -1,14 +1,15 @@
 import S from './Square.module.css';
-import { node } from 'prop-types';
+import { node, func } from 'prop-types';
 
 Square.propTypes = {
   children: node,
+  onPlay: func,
 };
 
-function Square({ children }) {
+function Square({ children, onPlay }) {
   const isDisabled = !!children;
   return (
-    <button className={S.component} disabled={isDisabled}>
+    <button className={S.component} onClick={onPlay} disabled={isDisabled}>
       {children}
     </button>
   );
