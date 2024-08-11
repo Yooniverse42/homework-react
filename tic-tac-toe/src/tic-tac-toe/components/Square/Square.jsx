@@ -1,12 +1,16 @@
 import S from './Square.module.css';
-import { PLAYER } from '@/constants';
+import { node } from 'prop-types';
 
-function Square() {
+Square.propTypes = {
+  children: node,
+};
+
+function Square({ children }) {
+  const isDisabled = !!children;
   return (
-    <div className={S.component}>
-      <button>{PLAYER.ONE}</button>
-      <button>{PLAYER.TWO}</button>
-    </div>
+    <button className={S.component} disabled={isDisabled}>
+      {children}
+    </button>
   );
 }
 
