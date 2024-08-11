@@ -1,6 +1,11 @@
 import Square from '../Square/Square';
 import S from './Squares.module.css';
-import { INITIAL_SQUARES, PLAYER, PLAYER_COUNT } from '@/constants';
+import {
+  INITIAL_SQUARES,
+  PLAYER,
+  PLAYER_COUNT,
+  checkWinner,
+} from '@/constants';
 import { useState } from 'react';
 
 function Squares() {
@@ -18,6 +23,9 @@ function Squares() {
       return next;
     });
   };
+
+  const winnerInfo = checkWinner(squares);
+  console.log('승자는?', winnerInfo);
 
   const gameIndex = squares.filter(Boolean).length;
 

@@ -1,4 +1,5 @@
 .component {
+  --square-size: 80px;
   --board-size: calc(var(--square-size) * 3);
   width: var(--board-size);
   height: var(--board-size);
