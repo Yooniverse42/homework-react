@@ -36,6 +36,13 @@ constants.js에서 tic-tac-toe에 나올 플레이어를 설정했습니다.
 <br />
 <br />
 
+## 산출물
+
+![](https://github.com/Yooniverse42/homework-react/blob/main/tic-tac-toe/render.png?raw=true)
+
+<br />
+<br />
+
 ## 느낀점
 
 수업에서 배운 코드를 그대로 진행하려 하였고, 코드 자체를 이해하려 노력했습니다. 이 과정을 통해 수업 때보다 훨씬 더 깊이 있는 이해를 얻을 수 있었습니다. 그러나, 제가 직접 고민하며 코드를 작성하지 않았다는 점과 완성하지 못했다는 점에서 아쉬움이 남습니다.
