@@ -1,5 +1,6 @@
+import './styles/main.css';
+import S from './Game.module.css';
 import Board from './components/Board/Board';
-import S from './Status.module.css';
 
 function Game() {
   return (
