@@ -5,6 +5,8 @@ import {
   PLAYER,
   PLAYER_COUNT,
   checkWinner,
+  WINNERS_COLOR,
+  PLAYER_LIST,
 } from '@/constants';
 import { useState } from 'react';
 
@@ -12,12 +14,15 @@ function Squares() {
   const [squares, setSquares] = useState(INITIAL_SQUARES);
 
   const handlePlay = (index) => () => {
+    if (winnerInfo) {
+      alert('GAME OVER');
+
+      return;
+    }
+
     setSquares((prev) => {
       const next = prev.map((square, squareIndex) => {
-        if (squareIndex === index) {
-          return currentPlayer;
-        }
-        return square;
+        return squareIndex === index ? currentPlayer : square;
       });
 
       return next;
@@ -25,7 +30,6 @@ function Squares() {
   };
 
   const winnerInfo = checkWinner(squares);
-  console.log('승자는?', winnerInfo);
 
   const gameIndex = squares.filter(Boolean).length;
 
@@ -35,8 +39,20 @@ function Squares() {
   return (
     <div className={S.component}>
       {squares.map((square, index) => {
+        const winnerStyles = {
+          backgroundColor: null,
+        };
+
+        if (winnerInfo) {
+          const [x, y, z] = winnerInfo.condition;
+
+          if (index === x || index === y || index === z) {
+            winnerStyles.backgroundColor = WINNERS_COLOR;
+          }
+        }
+
         return (
-          <Square key={index} onPlay={handlePlay(index)}>
+          <Square key={index} style={winnerStyles} onPlay={handlePlay(index)}>
             {square}
           </Square>
         );

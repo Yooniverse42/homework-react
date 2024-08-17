@@ -1,6 +1,7 @@
 export const PLAYER = { ONE: '🐰', TWO: '🦊' };
 
 export const PLAYER_COUNT = Object.keys(PLAYER).length;
+export const PLAYER_LIST = Object.values(PLAYER);
 
 export const INITIAL_SQUARES = Array(9).fill(null);
 
@@ -22,8 +23,10 @@ export const checkWinner = (squares) => {
     const winner = squares[x];
 
     if (winner && winner === squares[y] && winner === squares[z]) {
-      alert(`GAME OVER, WINNER IS ${winner}`);
-      winnerInfo = { winner };
+      winnerInfo = {
+        winner,
+        condition: [x, y, z],
+      };
 
       break;
     }
@@ -31,3 +34,5 @@ export const checkWinner = (squares) => {
 
   return winnerInfo;
 };
+
+export const WINNERS_COLOR = '#fff';
